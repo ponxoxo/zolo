@@ -304,6 +304,7 @@ $(document).ready(() => {
                   <div class="hidden form-submission-text">
                     <h2>Thank you for choosing Zolo</h2>
                     <h3>First things first...</h3>
+                    <p>We’ll be in touch in 5 mins to provide a diagnosis.</p>
                     <p>Please ensure your device is password protected to protect your data & files.</p>
                     <p>We'll let you know when we're 30 mins away from picking-up your device from your preferred address.</p>
                     <p>We will notify you when the repair is compelete and when it is on its way back to your preferred address.</p>
