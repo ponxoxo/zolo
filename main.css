@@ -14,6 +14,10 @@
   src: url('https://static1.squarespace.com/static/5f649ec69d85e375950c27e6/t/5f6ec3792a3e222b3d1b3d8e/1601094522034/Poppins-Bold.ttf');  
 }
 @font-face {    
+  font-family: 'custom-poppin-black';       
+  src: url('https://static1.squarespace.com/static/5f649ec69d85e375950c27e6/t/5f926da60e3a577b1d94833d/1603431849139/Poppins-Black.ttf');  
+}
+@font-face {    
   font-family: 'custom-poppin';       
   src: url('https://static1.squarespace.com/static/5f649ec69d85e375950c27e6/t/5f6ec3828bc67827185933c8/1601094530432/Poppins-Regular.ttf');  
 }
@@ -24,20 +28,21 @@
  */
 
 h1, h2, h3, h4 {
-  font-family: 'custom-poppin-bold';
+  font-family: 'custom-poppin-black';
   line-height: 1.2em;
 }
 .custom-button > div > a {
-  font-family: custom-poppin-bold
+  font-family: 'custom-poppin-bold'
+}
+a {
+  font-family: 'custom-poppin-bold'
 }
 p, div {
   font-family: 'custom-poppin';
 }
-
 .text-teal {
   color: var(--teal);
 }
-
 .emoji {
   font-size: 2rem;
 }
@@ -45,7 +50,6 @@ label.error {
   color: red !important;
   font-size: 0.8em;
 }
-
 .center-text{
   text-align: center;
 }
