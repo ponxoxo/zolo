@@ -39,6 +39,10 @@ div.custom-button > div.sqs-block-button {
   margin: auto;
 }
 
+.sqs-block-button {
+  padding-top: 0 !important;
+}
+
 /* .grid-container-twin-btn > .sqs-block {
   padding-top: 0;
 } */
