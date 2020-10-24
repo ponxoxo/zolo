@@ -29,6 +29,10 @@ div.custom-button > div.sqs-block-button {
   font-weight: 500;
 }
 
+a[href="https://www.instagram.com/zolo_au/"] {
+  padding: 10px 40px;
+}
+
 /* Button container */
 .grid-container-twin-btn {
   display: grid;
