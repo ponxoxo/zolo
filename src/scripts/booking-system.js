@@ -100,50 +100,51 @@ $(document).ready(() => {
     )
   }));
   
+  // Temp remove until pricing data is sorted for price estimation
   // Cost
-  estimatedCostHtml = (templateToDisplay, issueType, estimatedCost) => {
+  // estimatedCostHtml = (templateToDisplay, issueType, estimatedCost) => {
 
-    transformDescription = (templateToDisplay, issueType) => {
-      let defaultDesc = `We will need to replace the ${issueType.toLowerCase()} </br>
-      and we can turn this around within 24 </br>
-      hours.`
-      let templateDesc = GlobalConfig.issueDescription[`${templateToDisplay}`]
-      if (templateDesc != undefined) {
-        return templateDesc
-      } else {
-        return defaultDesc
-      }
-    }
+  //   transformDescription = (templateToDisplay, issueType) => {
+  //     let defaultDesc = `We will need to replace the ${issueType.toLowerCase()} </br>
+  //     and we can turn this around within 24 </br>
+  //     hours.`
+  //     let templateDesc = GlobalConfig.issueDescription[`${templateToDisplay}`]
+  //     if (templateDesc != undefined) {
+  //       return templateDesc
+  //     } else {
+  //       return defaultDesc
+  //     }
+  //   }
 
-    let issueDesc = transformDescription(templateToDisplay, issueType)
+  //   let issueDesc = transformDescription(templateToDisplay, issueType)
 
-    let html = `
-      <div id="zolo-content">
-        <div class="cost" style="text-align: right;"> 
-          <div class="container-cost">
-            <h3>Okay, so here's the <br>diagnosis:</h3>
-            <p>${issueDesc}</p>
-            <div class="spacer"></div>
-            <h3>It will cost:</br>      
-            $${estimatedCost}</h3>
-            <a class="modal-next-btn" id="cost-next"><h4>Next ></h4></a>
-          </div>
-        </div>
-      </div>
-    `
-    return html;
-  }
+  //   let html = `
+  //     <div id="zolo-content">
+  //       <div class="cost" style="text-align: right;"> 
+  //         <div class="container-cost">
+  //           <h3>Okay, so here's the <br>diagnosis:</h3>
+  //           <p>${issueDesc}</p>
+  //           <div class="spacer"></div>
+  //           <h3>It will cost:</br>      
+  //           $${estimatedCost}</h3>
+  //           <a class="modal-next-btn" id="cost-next"><h4>Next ></h4></a>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   `
+  //   return html;
+  // }
 
-  $(contentDiv).on('click', 'a#device-issue-next', function() {
-    if (issueType == undefined || (issueType == 'default' 
-      || deviceModel == 'default' || deviceModel == undefined)) return;
-    let template = getCostDiagnosisTemplate(isApple, deviceType, issueType);
-    let estPrice = getEstimatedPrice(isApple, deviceType, deviceModel, issueType)
-    updateHtml(
-      estimatedCostHtml(template, issueType, estPrice)
-    );
-    $('div.featherlight-content').addClass('background-cost');
-  });
+  // $(contentDiv).on('click', 'a#device-issue-next', function() {
+  //   if (issueType == undefined || (issueType == 'default' 
+  //     || deviceModel == 'default' || deviceModel == undefined)) return;
+  //   let template = getCostDiagnosisTemplate(isApple, deviceType, issueType);
+  //   let estPrice = getEstimatedPrice(isApple, deviceType, deviceModel, issueType)
+  //   updateHtml(
+  //     estimatedCostHtml(template, issueType, estPrice)
+  //   );
+  //   $('div.featherlight-content').addClass('background-cost');
+  // });
 
   // Listener for list options
   $(contentDiv).on('change', '.container-deviceissue > select', function() {
@@ -300,7 +301,14 @@ $(document).ready(() => {
                     ">
                     <input class="button sqs-system-button" type="submit" value="Submit">
                   </div>
-                  <div class="hidden form-submission-text">Thank you!</div>
+                  <div class="hidden form-submission-text">
+                    <h2>Thank you for choosing Zolo</h2>
+                    <h3>First things first...</h3>
+                    <p>Please ensure your device is password protected to protect your data & files.</p>
+                    <p>We'll let you know when we're 30 mins away from picking-up your device from your preferred address.</p>
+                    <p>We will notify you when the repair is compelete and when it is on its way back to your preferred address.</p>
+                    <p>If there are any changes or issues, please contact us.</p>
+                  </div>
                   <div class="hidden form-submission-html" data-submission-html=""></div>
               </form>
             </div>
@@ -324,14 +332,22 @@ $(document).ready(() => {
     // clean up
     $("#date-yui_3_17_2_1_1602289306229_91434, #time-yui_3_17_2_1_1602289306229_92089").css('display','none');
   });
-  
-  $(contentDiv).on('click', 'a#cost-next', function() {
-    updateHtml(
-      contactInformationHtml(),
-      'div.cost'
-    );
-    $('div.featherlight-content').removeClass('background-cost');
+
+  $(contentDiv).on('click', 'a#device-issue-next', function() {
+    if (issueType == undefined || (issueType == 'default' 
+      || deviceModel == 'default' || deviceModel == undefined)) return;
+      updateHtml(
+        contactInformationHtml()
+      );
   });
+  
+  // $(contentDiv).on('click', 'a#cost-next', function() {
+  //   updateHtml(
+  //     contactInformationHtml(),
+  //     'div.cost'
+  //   );
+  //   $('div.featherlight-content').removeClass('background-cost');
+  // });
 
   // Feather Light Setup / Cleanup
   cleanupAndSetup = () => {

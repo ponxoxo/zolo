@@ -32,7 +32,23 @@ $(document).ready(() => {
   $(newVibesContentDiv).append(newVibesDeviceModelHtml(GlobalConfig['isApple']['phone']['models']));
   
   // Upgrade Selection
-  newVibesUpgradeOptionsHtml = (upgradeOptions) => {
+  newVibesUpgradeOptionsHtml = (upgradeOptions, modelList, selectedModel) => {
+    const calcAllPricing = (upgradeOptions, modelList) => {
+      let modelPrice = undefined;
+      for (model of modelList) {
+        if (Object.keys(model)[0] == selectedModel) {
+          modelPrice = model[selectedModel]
+          break;
+        }
+      }
+      return (
+        (parseInt(modelPrice) + 
+        parseInt(upgradeOptions.battery) + 
+        parseInt(upgradeOptions.screen) + 
+        parseInt(upgradeOptions.housing)) * 0.8
+      )
+    }
+    const allPrice = calcAllPricing(upgradeOptions, modelList);
     let upgradeOptionsHtml = `
       <div id="zolo-newvibes-content">
         <h2 style="text-align: center; color: black !important;">Select upgrade option</h2>
@@ -40,7 +56,7 @@ $(document).ready(() => {
           <a id="upgrade-opt" class="btn-upgrade-options" href="#" data="battery" price="${upgradeOptions.battery}">Battery replacement</a>
           <a id="upgrade-opt" class="btn-upgrade-options" href="#" data="screen" price="${upgradeOptions.screen}">Screen replacement</a>
           <a id="upgrade-opt" class="btn-upgrade-options" href="#" data="housing" price="${upgradeOptions.housing}">Housing replacement</a>
-          <a id="upgrade-opt" class="btn-upgrade-options" href="#" data="all" price="${upgradeOptions.all}">All the above</a>
+          <a id="upgrade-opt" class="btn-upgrade-options" href="#" data="all" price="${allPrice}">All the above</a>
         </div>
       </div>
     `
@@ -52,7 +68,11 @@ $(document).ready(() => {
     if (!newVibesDeviceModel) return;
     console.log(`Device Model: ${newVibesDeviceModel}`)
     updateHtml(
-      newVibesUpgradeOptionsHtml(GlobalConfig['newVibeUpgradeOptions']), 
+      newVibesUpgradeOptionsHtml(
+        GlobalConfig['newVibeUpgradeOptions']['issues'], 
+        GlobalConfig['newVibeUpgradeOptions']['models'],
+        newVibesDeviceModel
+      ), 
       removeSelector="div#zolo-newvibes-content", 
       appendSelector="div#newvibes-system" 
     );
@@ -66,7 +86,7 @@ $(document).ready(() => {
   // Contact Information
   newVibesContactInformationHtml = (upgradePrice) => {
     let contactFormHtml = $(`
-      <div id="zolo-content">
+      <div id="zolo-newvibes-content">
         <div class="contact-information">
           <div class="form-wrapper" id="yui_3_17_2_1_1603017358193_90">
             <div class="form-title" style="display:none;">Booking</div>
@@ -207,7 +227,14 @@ $(document).ready(() => {
                     ">
                     <input class="button sqs-system-button" type="submit" value="Submit">
                   </div>
-                  <div class="hidden form-submission-text">Thank you!</div>
+                  <div class="hidden form-submission-text">
+                    <h2>Thank you for choosing Zolo</h2>
+                    <h3>First things first...</h3>
+                    <p>Please ensure your device is password protected to protect your data & files.</p>
+                    <p>We'll let you know when we're 30 mins away from picking-up your device from your preferred address.</p>
+                    <p>We will notify you when the repair is compelete and when it is on its way back to your preferred address.</p>
+                    <p>If there are any changes or issues, please contact us.</p>
+                  </div>
                   <div class="hidden form-submission-html" data-submission-html=""></div>
               </form>
             </div>
@@ -248,7 +275,7 @@ $(document).ready(() => {
   $('a[data-featherlight="#newvibes-system"]').click(function() {
     $.featherlight({
       beforeOpen: function(event){
-        donateDeviceType = null;
+        newVibesDeviceModel = newVibesUpgradePrice = null;
         updateHtml(
           newVibesDeviceModelHtml(GlobalConfig['isApple']['phone']['models']),
           removeSelector="div#zolo-newvibes-content", 

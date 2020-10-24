@@ -197,7 +197,10 @@ $(document).ready(() => {
                       <input class="button sqs-system-button" type="submit" value="Submit" />
                   </div>
 
-                  <div class="hidden form-submission-text">Thank you!</div>
+                  <div class="hidden form-submission-text">
+                    <h2>We Appreciate your generosity</h2>
+                    <h4>Together, we are helping young Australians<br> create their passion.</h3>
+                  </div>
                   <div class="hidden form-submission-html" data-submission-html=""></div>
               </form>
           </div>

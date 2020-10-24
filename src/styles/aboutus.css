@@ -118,6 +118,44 @@
   font-family: custom-poppin !important;
 }
 
+/*** How it works ***/
+#block-yui_3_17_2_1_1603435581920_31311 {
+  width: 70%;
+    margin: auto
+}
+.grid-container-steps {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.grid-container-steps-sub {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  text-align: center;
+}
+.grid-container-steps-sub > p {
+  align-self: center;
+}
+.grid-container-steps-sub > h4 {
+  align-self: center;
+  font-size: 2.1rem !important;
+  font-weight: 600;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+a#button-faq {
+  padding: .2rem 4rem;
+}
+a#button-faq > p {
+  font-weight: 600;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+#button-faq > p {
+  font-family: custom-poppin-bold;
+}
+
 /* Mobile */
 @media only screen and (max-width: 850px) {
   .grid-container-facts {

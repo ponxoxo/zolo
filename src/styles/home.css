@@ -21,12 +21,26 @@
   color: #00c6b7;
 }
 
-/* button */
+/* buttons */
 div.custom-button > div.sqs-block-button {
   padding-left: 0 !important;
 }
 #booking-popup {
   font-weight: 500;
+}
+
+/* Button container */
+.grid-container-twin-btn {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+
+.grid-container-twin-btn > .sqs-block {
+  padding-top: 0;
 }
 
 /*** Learn More ***/
@@ -138,6 +152,9 @@ a#button-faq > p {
 @media only screen and (max-width: 800px) {
   #page-section-5f64a00840e1a14ef6bf66d7 {
     width: 80%;
+  }
+  .grid-container-twin-btn {
+    grid-template-columns: auto;
   }
 }
 @media only screen and (max-width: 700px) {
