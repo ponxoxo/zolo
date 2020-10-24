@@ -40,7 +40,7 @@ a {
 .sqs-block-button-element {
   font-family: 'custom-poppin-bold'
 }
-.button-block .sqs-block-button > a {
+.sqs-block-button > a {
   padding: 10px 40px;
 }
 p, div {
