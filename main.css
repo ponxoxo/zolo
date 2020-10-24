@@ -40,7 +40,7 @@ a {
 .sqs-block-button-element {
   font-family: 'custom-poppin-bold'
 }
-a[href="/zolotogether"], a[href="/new-phone-vibes"] {
+a[href="/zolotogether"], a[href="/new-phone-vibes"], a[href="/about-us"] {
   padding: 10px 40px;
 }
 p, div {
