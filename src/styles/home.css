@@ -39,9 +39,9 @@ div.custom-button > div.sqs-block-button {
   margin: auto;
 }
 
-.grid-container-twin-btn > .sqs-block {
+/* .grid-container-twin-btn > .sqs-block {
   padding-top: 0;
-}
+} */
 
 /*** Learn More ***/
 .grid-container-learn {
@@ -154,7 +154,8 @@ a#button-faq > p {
     width: 80%;
   }
   .grid-container-twin-btn {
-    width: 80%;
+    grid-template-columns: auto;
+    width: 95%;
   }
 }
 @media only screen and (max-width: 700px) {

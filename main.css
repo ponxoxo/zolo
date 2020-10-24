@@ -108,6 +108,9 @@ p.preFade {
   nav > div > a[href="/new-phone-vibes"], nav > div > a[href="/faqs"] {
     display: inline-block;
   }
+  a[href="/zolotogether"], a[href="/new-phone-vibes"], a[href="/about-us"] {
+    padding: 9.7px 40px
+  }
 }
 
 /* Contact Information - Thank You */
