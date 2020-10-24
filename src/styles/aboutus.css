@@ -1,0 +1,145 @@
+.grid-container-aboutus {
+  display: grid;
+  grid-template-columns: auto;
+  margin-left: 55%;
+}
+
+.grid-container-aboutus-sub {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.grid-container-aboutus-sub > h2 {
+  color: #6f008f !important;
+  font-weight: bold;
+  line-height: 1.2em
+}
+
+.grid-container-aboutus-sub > a {
+  width: 170px;
+  background-color: #6f008f;
+  display: grid;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.grid-container-aboutus-sub > p {
+  font-weight: 500;
+  color: black;
+  line-height: 1.45em;
+  word-spacing: 0.04em;
+}
+
+.grid-container-aboutus-sub > a > p {
+  font-weight: 600;
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  padding: 10px 0;
+}
+
+#block-yui_3_17_2_1_1601957203057_12782 > div > div > div > a > p {
+  font-family: custom-poppin-bold;
+}
+
+#block-yui_3_17_2_1_1602128658561_10205 > div > div > .sqs-block-button {
+  text-align: center !important;
+}
+
+#block-yui_3_17_2_1_1602128658561_10205 {
+  text-align: center !important;
+}
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .grid-container-aboutus {
+    margin-left: 0 !important;
+  }
+}
+
+/*** fix info ***/
+
+.grid-container-fix-facts {
+  display: grid;
+  grid-template-rows: auto auto;
+  text-align: center;
+}
+
+.grid-container-facts {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.grid-container-facts-sub {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: center;
+}
+
+.grid-container-facts-sub > img {
+  height: 200px;
+  margin: auto;
+}
+
+#block-yui_3_17_2_1_1601966202905_22485 > div > h2 {
+  text-align: center;
+}
+
+#block-yui_3_17_2_1_1601966255966_43028 > div > h2 {
+  color: white;
+}
+
+#block-yui_3_17_2_1_1601966255966_24403 > div > p {
+  font-size: 1.4rem;
+}
+
+.aboutus-teal {
+  color: #00c6b7;
+}
+
+.grid-container-page-aboutus {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  text-align: center;
+}
+
+.grid-container-page-aboutus-sub {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.grid-container-page-aboutus-sub > h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: #00c6b7 !important;
+  font-size: 1.8rem;
+}
+
+#block-5f7c0f3d5ec0ad374a89f3ae > div > h3 {
+  color: white;
+  font-family: custom-poppin !important;
+}
+
+/* Mobile */
+@media only screen and (max-width: 850px) {
+  .grid-container-facts {
+    grid-template-columns: 50% auto;;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container-facts {
+    grid-template-columns: auto;;
+  }
+  .grid-container-facts-sub {
+    margin: 30px 0;
+  }
+}
+
+/* Zolotogether mobile */
+@media only screen and (max-width: 750px) {
+  .grid-container-page-aboutus {
+    grid-template-columns: auto;
+  }
+  .grid-container-page-aboutus > a {
+    margin: 25px 0;
+  }
+}

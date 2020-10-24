@@ -1,0 +1,29 @@
+
+/* Zolo Rewards */
+.grid-container-rewards {
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+
+.grid-item-rewards {
+  margin: auto;
+}
+
+.reward-background {
+  background: url(https://static1.squarespace.com/static/5f649ec69d85e375950c27e6/t/5f7d1e3c2ff75e525277da36/1602035263352/sandy-millar-YeJWDWeIZho-unsplash.jpg) !important;
+}
+
+#sections > section.page-section.layout-engine-section.background-width--full-bleed.section-height--medium.content-width--wide.horizontal-alignment--center.vertical-alignment--middle.white-bold > div.section-background {
+  background-image: url(https://static1.squarespace.com/static/5f649ec69d85e375950c27e6/t/5f7d1e3c2ff75e525277da36/1602035263352/sandy-millar-YeJWDWeIZho-unsplash.jpg) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+}
+
+#block-5f7d1a72b0fcb97c1801b270 > div > p {
+  font-size: 1.4rem;
+}
+
+.grid-container-new-feeling-sub > div > a > p.emoji {
+  margin: 25px 0;
+}

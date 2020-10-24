@@ -1,0 +1,93 @@
+/*
+ *  Vars
+ */
+ :root {
+  --btn-color: #00c6b7;  
+  --teal: #00c6b7;
+  --content-background-color: #e2e3e4;
+  --btn-color-hover: #00b3a4;
+  --black-color-hover: #737373;
+  --white-color-hover: #b3fff9;
+}
+@font-face {    
+  font-family: 'custom-poppin-bold';       
+  src: url('https://static1.squarespace.com/static/5f649ec69d85e375950c27e6/t/5f6ec3792a3e222b3d1b3d8e/1601094522034/Poppins-Bold.ttf');  
+}
+@font-face {    
+  font-family: 'custom-poppin';       
+  src: url('https://static1.squarespace.com/static/5f649ec69d85e375950c27e6/t/5f6ec3828bc67827185933c8/1601094530432/Poppins-Regular.ttf');  
+}
+
+/*
+ * General 
+ * Modifications
+ */
+
+h1, h2, h3, h4 {
+  font-family: 'custom-poppin-bold';
+  line-height: 1.2em;
+}
+.custom-button > div > a {
+  font-family: custom-poppin-bold
+}
+p, div {
+  font-family: 'custom-poppin';
+}
+
+.text-teal {
+  color: var(--teal);
+}
+
+.emoji {
+  font-size: 2rem;
+}
+label.error {
+  color: red !important;
+  font-size: 0.8em;
+}
+div.header-actions-action.header-actions-action--social > a:nth-child(1) { /* facebook icon */
+  border-left: 1px solid white;
+  margin-left: 1.5em !important;
+  padding-left: 1.02em !important;
+}
+.sqs-block-content > div > a {
+  font-family: custom-poppin-bold;
+}
+div.header-actions-action.header-actions-action--social > a:nth-child(2) { /* hide twitter icon */
+  display: none;
+}
+#header > div.header-menu.header-menu--folder-list > div.header-menu-nav > nav > div > div.header-menu-actions > div:nth-child(2) {
+  display: none;
+}
+nav > div > a[href="/zolotogether"], nav > div > a[href="/zolorewards"], 
+nav > div > a[href="/new-phone-vibes"], nav > div > a[href="/faqs"] {
+  display: none;
+}
+.header-nav-list {
+  display: inline-block;
+}
+div.header-menu-nav-folder-content > div > a {
+  font-family: custom-poppin-bold;
+  margin: 0.5em 0;
+}
+p.preFade {
+  opacity: 1 !important;
+}
+
+@media only screen and (max-width: 1024px) and (pointer: coarse), screen and (max-width: 799px) {
+  .header>.header-announcement-bar-wrapper {
+        padding: 0 !important;
+    }
+  }
+@media only screen and (max-width: 800px) {
+  #header > div.header-announcement-bar-wrapper {
+    padding: 0;
+  }
+  div.header-title > div > a > img {
+    max-height: 54px !important;
+  }
+  nav > div > a[href="/zolotogether"], nav > div > a[href="/zolorewards"], 
+  nav > div > a[href="/new-phone-vibes"], nav > div > a[href="/faqs"] {
+    display: inline-block;
+  }
+}

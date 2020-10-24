@@ -1,0 +1,46 @@
+#block-yui_3_17_2_1_1601981631820_14325 > div > h2 {
+  text-align: center;
+}
+
+#block-yui_3_17_2_1_1601981631820_18193 > div > div.custom-button {
+  text-align: center;
+}
+
+#donate-device > h4 {
+  color: black !important;
+}
+.grid-container-page-zolotogether {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  text-align: center;
+}
+.grid-container-page-zolotogether-sub {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+.grid-container-page-zolotogether-sub > h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: #00c6b7 !important;
+  font-size: 1.8rem;
+}
+#block-yui_3_17_2_1_1601981631820_18193 > div > div { /* Center Donate Button */
+  text-align: center;
+}
+
+/* Zolotogether mobile */
+@media only screen and (max-width: 750px) {
+  .grid-container-page-zolotogether {
+    grid-template-columns: auto;
+  }
+  .grid-container-page-zolotogether > a {
+    margin: 25px 0;
+  }
+}
+
+/* Zolotogether mobile */
+@media only screen and (max-width: 650px) {
+  .grid-container-new-feeling {
+    grid-template-columns: auto;
+  }
+}

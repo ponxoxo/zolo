@@ -1,0 +1,171 @@
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 23%;
+  padding: 0 5px;
+}
+
+.column-device {
+  float: left;
+  width: 33.3%;
+  /* padding: 2.8% 5px; */
+}
+
+#stepsInfo {
+  color: #39e02f;
+}
+
+.column-isApple {
+  float: left;
+  width: 50%;
+  /* padding: 2.8% 5px; */
+}
+
+#block-5f64a1f61573e80e2bfe4cc6 > div.sqs-block-content > h2 {
+  color: #39e02f;
+}
+
+section[data-section-id="5f64ad33c648c4471cbed9a0"] > div.section-background {
+  background-color: #e2e3e4;
+}
+
+#why-zolo {
+  height: 100px;
+}
+
+div#page-section-5f64ad33c648c4471cbed9a0 {
+  color: #6f008f;
+}
+
+div#block-5f64ad357b4efc5ebc5777de > div > h2 {
+    color: #6f008f;
+}
+
+div#block-5f64ae19ab0bc632f08cfab0 > div > p {
+  color: white;
+}
+
+div#block-yui_3_17_2_1_1600435638441_11571 > div > h3 {
+  color: white;
+}
+
+div#block-5f64aea7b085d07e34b34caa > div > h1 {
+  color: #00c6b7;
+}
+
+div#block-5f64aea7b085d07e34b34caa {
+  color: #00c6b7;
+}
+
+p.preFade {
+  opacity: 1;
+}
+
+/* Model & Issue Selection */
+
+.column-deviceIssue {
+  float: left;
+  width: 50%;
+ /* padding: 2.8% 5px; */
+}
+/* summary */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.grid-item {
+  padding: 0 20px 0;
+}
+
+.summary-heading {
+  color: white;
+  background-color: black;
+  width: fit-content;
+  margin: 1px;
+  padding: 3px 20px;
+  margin: 10px 0 10px;
+}
+
+#name #address #mobile #prefer {
+  margin: 5px;
+}
+
+#summaryConfirm {
+  margin: 5px;
+}
+
+/* Clear floats after the columns */
+.row-summary:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ 
+/* TODO; change first to 1px only */
+.section-background {
+ -webkit-filter: blur(2px); 
+}
+
+.header-announcement-bar-wrapper {
+  background-color: #6f008f !important;
+}
+
+.sqs-block {
+  padding-bottom: 7px;
+  
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -10px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  padding: 13px;
+  text-align: center;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/**********************/
+/** customise spacer **/
+/**********************/
+
+.sqs-layout.sqs-editing .sqs-block, .sqs-block-spacer-content {
+    min-height: 0px !important;
+}
+.sqs-block-spacer .sqs-block-content {
+  height: 0;
+}
+
+.sqs-block-spacer {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+/*******************/
+/** Customisation **/
+/*******************/
+
+.custom-button-center {
+  text-align: center;
+}
+
+.custom-button {
+  margin: 8% 25px;
+}

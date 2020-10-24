@@ -1,0 +1,78 @@
+/*
+ *  Setup
+ */
+
+@media only screen and (max-width: 600px) {
+  div.featherlight > div.featherlight-content {
+    margin-top: 0 !important;
+    max-width: 95% !important;
+    width: 100% !important;
+    padding: 0;
+    
+  }
+  div.featherlight {
+    background-color: #fff !important;
+  }
+  .form-wrapper .field-list .field .caption .field-element {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  div.featherlight > div.featherlight-content {
+    width: 600px;
+  }
+}
+
+/*
+ *  General i.e buttons etc
+ */
+.modal-btn {
+ color: #fff;
+ background-color: var(--btn-color) !important;
+ border-color: var(--btn-color);
+ border: 0px;
+ outline: 0px !important;
+ border-radius: 8px;
+}
+.modal-next-btn > h4 {
+ text-align: right;
+ margin: 25px;
+}
+.modal-next-btn:hover > h4 {
+ color: var(--black-color-hover);
+}
+button.modal-btn:hover {
+ background-color: var(--btn-color-hover);
+}
+
+/* Device Selection */
+.container-devices {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  margin: 25px 0;
+}
+a#donate-device > h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+a#donate-device:hover > h4 {
+  color: var(--black-color-hover) !important;
+}
+img#device-icon {
+  max-width: 100%;
+}
+@media only screen and (max-width: 600px) { /* Mobile */
+  .container-devices {
+    grid-template-columns: auto;
+  }
+  img#device-icon {
+    max-width: 40%;
+    height: 180px;
+  }
+}
+
+/* Contact Info */
+
+#date-yui_3_17_2_1_1602325125659_13942, #time-yui_3_17_2_1_1602325125659_14618 {
+  display: none;
+}

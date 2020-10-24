@@ -1,0 +1,122 @@
+/* New Phone Feeling / vibes */
+.grid-container-new-feeling {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.grid-container-new-feeling-sub {
+  display: grid;
+  grid-template-rows: auto auto auto; 
+}
+
+.grid-item-new-feeling {
+  text-align: center;
+}
+
+#block-yui_3_17_2_1_1602033898267_6735 > div > div.custom-button {
+  text-align: center;
+  margin-left: 25px;
+}
+
+#block-yui_3_17_2_1_1602070947035_7796 > div > div.custom-button {
+  justify-content: center !important;
+  display: grid !important;
+}
+
+.grid-container-model {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: center;
+}
+
+.grid-container-model > select#vibes-deviceModel {
+  margin: 3em auto;
+  height: 3em;
+}
+
+.grid-container-upgrade-opts-col {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  justify-content: center;
+  text-align: center;
+  padding: 2.5em 0
+}
+
+.grid-item-upgrade-opts-single {
+  margin: auto;
+}
+
+div.upgrade-custom-button {
+  background: #6f008f;
+  width: 220px;
+  margin: 20px auto;
+  padding: 1.2em;
+  border-radius: 15px;
+}
+
+div.grid-container-upgrade-opts-col > div.upgrade-custom-button > div > a {
+  color: white;
+  border: 0px !important;
+  outline: 0px !important; 
+}
+
+.grid-container-upgrade-opts-col > div > .sqs-block {
+  padding: 0;
+}
+
+.grid-container-row-vibe-total {
+  display: grid;
+  grid-template-rows: auto;
+  margin: auto;
+  margin: auto 1em;
+  text-align: left;
+}
+
+.grid-container-row-vibe-total > h3 {
+  color: white;
+}
+
+.grid-container-steps {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.grid-container-steps-sub {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  text-align: center;
+}
+.grid-container-steps-sub > p {
+  align-self: center;
+}
+.grid-container-steps-sub > h4 {
+  align-self: center;
+  font-size: 2.1rem !important;
+  font-weight: 600;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+div.sqs-block > div > div.sqs-block-button {
+  text-align: center;
+}
+
+/* mobile */ 
+@media only screen and (max-width: 850px) {
+  .grid-container-steps {
+    grid-template-columns: 50% auto;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .grid-container-steps {
+    grid-template-columns: auto;
+  }
+  .grid-container-steps-sub {
+    margin: 25px 0;
+  }
+  .grid-container-new-feeling {
+    grid-template-columns: auto;
+  }
+  .grid-container-new-feeling-sub {
+    margin: 25px 0;
+  }
+}

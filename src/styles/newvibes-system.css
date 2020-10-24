@@ -1,0 +1,128 @@
+
+/*
+ *  General / Setups
+ */
+div.featherlight {
+  background: rgba(0,0,0,0.8) !important;
+}
+
+div.featherlight-content {
+  background-color: var(--content-background-color);
+}
+div.featherlight > div.featherlight-content {
+  margin-top: 75.5px;
+  margin-bottom: 75.5px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.modal-btn {
+  color: #fff;
+  background-color: var(--btn-color);
+  border-color: var(--btn-color);
+  border: 0px;
+  outline: 0px !important;
+  border-radius: 8px;
+}
+.modal-next-btn > h4 {
+  text-align: center;
+  margin: 25px;
+}
+.modal-next-btn:hover > h4 {
+  color: var(--black-color-hover);
+}
+@media only screen and (max-width: 600px) {
+  div.featherlight > div.featherlight-content {
+    margin-top: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    
+  }
+  div.featherlight {
+    background-color: #fff !important;
+  }
+  .featherlight .featherlight-close-icon { /* Fix close button from going to far right */
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  div.featherlight > div.featherlight-content {
+    width: 600px;
+  }
+}
+
+/*
+ *  New Vibes System
+ */
+
+/* Device Model Selection */
+.container-devicemodels {
+  display: grid;
+  grid-template-columns: auto;
+  margin: 25px 0;
+}
+.btn-select {
+  background-color: var(--btn-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: white;
+  text-align: center;
+  text-align-last: center;
+  margin: 25px;
+  width: 230px;
+  height: 45px;
+  border: 0px;
+  outline: 0px !important;
+  border-radius: 8px;
+}
+.btn-select:hover {
+  background-color: var(--btn-color-hover);
+}
+
+@media only screen and (max-width: 600px) { /* Mobile */
+
+}
+
+/* Device Model Selection */
+.container-upgrades {
+  display: grid;
+  grid-template-columns: auto;
+}
+.btn-upgrade-options {
+  background: #6f008f;
+  width: 220px;
+  margin: 20px auto;
+  padding: 1.2em;
+  border-radius: 15px;
+  outline: 0;
+  text-align: center;
+  color: white;
+  border: 0;
+}
+.btn-upgrade-options:hover {
+  background: #a000cc;
+}
+
+/* Contact Information */
+input.modal-btn {
+  background-color: var(--btn-color) !important;
+}
+input.modal-btn:hover {
+  background-color: var(--btn-color-hover) !important;
+}
+.form-wrapper .field-list .field .field-element {
+  padding: 10px !important;
+  margin: 0 !important;
+  width: 95% !important;
+  outline: 0;
+}
+.form-wrapper .field-list .fields {
+  margin: 0 !important;
+}
+.form-wrapper .field-list .fields .title, .form-wrapper .field-list .fields .description, .form-wrapper .field-list .fields .field, .form-wrapper .field-list .fields .field-error {
+  margin-left: 0 !important;
+}
+
+#date-yui_3_17_2_1_1602289306229_91434, #time-yui_3_17_2_1_1602289306229_92089 {
+  display: none;
+}

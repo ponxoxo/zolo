@@ -1,0 +1,198 @@
+
+/*** Home Page ***/
+#page-section-5f64a00840e1a14ef6bf66d7 {
+  width: 45%;
+}
+.home-title {
+  transition-timing-function: ease; 
+  transition-duration: 0.4s; 
+  transition-delay: 0.139286s;
+  line-height: 1.1em !important;
+  margin: 0;
+}
+
+/* descriptoon below title */
+#block-5f64a009c8b45a24a2823d93 > div > p {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  margin: 0.4rem 0;
+}
+.home-zolo-teal {
+  color: #00c6b7;
+}
+
+/* button */
+div.custom-button > div.sqs-block-button {
+  padding-left: 0 !important;
+}
+#booking-popup {
+  font-weight: 500;
+}
+
+/*** Learn More ***/
+.grid-container-learn {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+.grid-container-learn-sub {
+  display: grid;
+  grid-template-rows: 80% auto auto;
+}
+.grid-item-learn {
+  max-width: 95%;
+  margin: 10px 0;
+}
+#img-learn-more {
+  width: auto;
+}
+.grid-item-learn > h4 {
+  color: #6f008f;
+}
+
+/*** How it works ***/
+#block-yui_3_17_2_1_1601426259539_91062 {
+  width: 70%;
+    margin: auto
+}
+.grid-container-steps {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.grid-container-steps-sub {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  text-align: center;
+}
+.grid-container-steps-sub > p {
+  align-self: center;
+}
+.grid-container-steps-sub > h4 {
+  align-self: center;
+  font-size: 2.1rem !important;
+  font-weight: 600;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+#block-yui_3_17_2_1_1600472768678_12254 > div > div.custom-button {
+  justify-content: center !important;
+  display: grid !important;
+}
+a#button-faq {
+  padding: .2rem 4rem;
+}
+a#button-faq > p {
+  font-weight: 600;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+#block-yui_3_17_2_1_1601426259539_91062 > div > p {
+  font-size: 1.4rem;
+}
+#button-faq > p {
+  font-family: custom-poppin-bold;
+}
+
+/* Tell Me More */
+
+.grid-container-learn-more {
+  display: grid;
+  grid-template-columns: auto;
+  margin-left: 55%;
+}
+
+.grid-container-learn-more-sub {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.grid-container-learn-more-sub > a {
+  width: 170px;
+  background-color: #6f008f;
+  display: grid;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.grid-container-learn-more-sub > a > p {
+  font-weight: 600;
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  padding: 10px 0;
+  font-family: custom-poppin-bold;
+}
+
+/* mobile */ 
+@media only screen and (max-width: 850px) {
+  .grid-container-steps {
+    grid-template-columns: 50% auto;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .grid-container-steps {
+    grid-template-columns: auto;
+  }
+  .grid-container-steps-sub {
+    margin: 25px 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #page-section-5f64a00840e1a14ef6bf66d7 {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .grid-container-learn {
+    grid-template-columns: auto;
+  }
+  .grid-container-learn-sub {
+    grid-template-rows: auto;
+  }
+  .grid-item-learn {
+    text-align: center;
+    margin: 40px 0;
+  }
+  .grid-item-learn > h4 {
+    margin: 10px 0;
+  }
+
+  .grid-item-learn > p {
+    margin: 0;
+  }
+  #img-learn-more {
+    /* height: 300px; */
+    width: 40%;
+  }
+
+}
+
+/* Fix Facts */
+.grid-container-fix-facts {
+  display: grid;
+  grid-template-rows: auto auto;
+  text-align: center;
+}
+.grid-container-facts {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.grid-container-facts-sub {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: center;
+}
+
+/* Mobile */
+@media only screen and (max-width: 850px) {
+  .grid-container-facts {
+    grid-template-columns: 50% auto;;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container-facts {
+    grid-template-columns: auto;;
+  }
+  .grid-container-facts-sub {
+    margin: 30px 0;
+  }
+}
