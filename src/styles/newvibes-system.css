@@ -92,7 +92,7 @@ div.featherlight > div.featherlight-content {
 
 /* Price Estimate */
 .container-newvibes-cost {
-  width: 400px;
+  /* width: 400px; */
 }
 .container-newvibes-cost > h2 {
   color: white;
