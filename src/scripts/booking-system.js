@@ -2,7 +2,7 @@ $(document).ready(() => {
 
   // Global Variables
   let deviceType, deviceModel,
-  issueType, isApple = null;
+  issueType, isApple, backBtn = null;
 
   const contentDiv = "div#booking-system";
   
@@ -227,8 +227,8 @@ $(document).ready(() => {
                       <legend class="title">
                         Select Pick-up Window
                       </legend>
-                      <div class="option"><label><input type="radio" name="radio-yui_3_17_2_1_1603016307989_203780-field" value="Immediate pick-up (we’ll be there in two hours)"> Immediate pick-up (we’ll be there in two hours)</label></div>
-                      <div class="option"><label><input type="radio" name="radio-yui_3_17_2_1_1603016307989_203780-field" value="Select time and date"> Select time and date</label></div>
+                      <div class="option"><label><input id="asapPickup" type="radio" name="radio-yui_3_17_2_1_1603016307989_203780-field" value="Immediate pick-up (we’ll be there in two hours)"> Immediate pick-up (we’ll be there in two hours)</label></div>
+                      <div class="option"><label><input id="selectedWindow" type="radio" name="radio-yui_3_17_2_1_1603016307989_203780-field" value="Select time and date"> Select time and date</label></div>
                   </fieldset>
                   <fieldset id="date-yui_3_17_2_1_1602289306229_91434" class="form-item fields date">
                       <legend class="title">
@@ -271,7 +271,7 @@ $(document).ready(() => {
                       </div>
                       <div class="field second two-digits" style="display:none;">
                         <label class="caption">
-                        <input class="field-element" style="display:none;" type="text" maxlength="2" data-title="Second">
+                        <input class="field-element" style="display:none;" type="text" maxlength="2" data-title="Second" value="00">
                         <span class="caption-text" style="display:none;">Second</span>
                         </label>
                       </div>
@@ -282,12 +282,12 @@ $(document).ready(() => {
                         </select>
                       </div>
                   </fieldset>
-                  <fieldset id="checkbox-yui_3_17_2_1_1603585132188_123440" class="form-item field checkbox required" aria-required="true">
+                  <fieldset style="display:none;" id="checkbox-yui_3_17_2_1_1603585132188_123440" class="form-item field checkbox required" aria-required="true">
                       <legend class="title">
                         Terms and Conditions
                         <span class="required" aria-hidden="true">*</span>
                       </legend>
-                      <div class="option"><label><input type="checkbox" name="checkbox-yui_3_17_2_1_1603585132188_123440-field" value="I Agree to Terms"> I Agree to Terms</label></div>
+                      <div class="option"><label><input type="checkbox" name="checkbox-yui_3_17_2_1_1603585132188_123440-field" value="I Agree to Terms" checked> I Agree to Terms</label></div>
                   </fieldset>
                   <input type="hidden" class="form-item field hidden" id="hidden-yui_3_17_2_1_1602289306229_90323" name="SQF_DEVICE_TYPE" value="${deviceType}">
                   <input type="hidden" class="form-item field hidden" id="hidden-yui_3_17_2_1_1602289306229_89145" name="SQF_ISAPPLE" value="${isApple}">
@@ -321,8 +321,8 @@ $(document).ready(() => {
   }
 
   // Listener for 'select pick up window' specific to input ids
-  const asapPickup = "#yui_3_17_2_1_1603017358193_267"
-  const selectedWindow = "#yui_3_17_2_1_1603017358193_282"
+  const asapPickup = "#asapPickup"
+  const selectedWindow = "#selectedWindow"
   
   $(contentDiv).on('change', selectedWindow, function() {
     // unhide
@@ -354,7 +354,9 @@ $(document).ready(() => {
   cleanupAndSetup = () => {
     deviceType = deviceModel = null;
     issueType = isApple = null;
-    updateHtml(deviceSelectionHtml)
+    updateHtml(deviceSelectionHtml);
+    $.scrollify.disable()
+    $("body").addClass("modal-open");
   }
 
   let configuration = ({
@@ -365,5 +367,9 @@ $(document).ready(() => {
   
   $('a[data-featherlight="#booking-system"]').click(function() {
     $.featherlight(configuration);
+    $.featherlight.defaults.afterClose = () => {
+      $("body").removeClass("modal-open");
+      $.scrollify.enable()
+    }
   });
 });

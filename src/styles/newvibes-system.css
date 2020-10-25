@@ -10,7 +10,6 @@ div.featherlight-content {
   background-color: var(--content-background-color);
 }
 div.featherlight > div.featherlight-content {
-  padding: 4vw;
   margin: auto;
 }
 .modal-btn {
@@ -31,9 +30,14 @@ div.featherlight > div.featherlight-content {
 @media only screen and (max-width: 600px) {
   div.featherlight {
     background-color: #fff !important;
+    
+  }
+  div.featherlight > div.featherlight-content  {
+    width: 100%;
+    padding: 25px 0px !important;
   }
   .featherlight .featherlight-close-icon { /* Fix close button from going to far right */
-    margin-right: 15px;
+    margin-right: 2vw;
   }
 }
 

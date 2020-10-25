@@ -27,6 +27,9 @@
  * Modifications
  */
 
+body.modal-open {
+  overflow: hidden;
+ }
 h1, h2, h3, h4 {
   font-family: 'custom-poppin-black';
   line-height: 1.2em;
@@ -125,4 +128,8 @@ p.preFade {
   border: 0px;
   outline: 0px !important;
   border-radius: 8px;
+}
+
+div.contact-information {
+  padding: 20px;
 }

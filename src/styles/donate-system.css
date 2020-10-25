@@ -5,7 +5,7 @@
 @media only screen and (max-width: 600px) {
   div.featherlight > div.featherlight-content {
     margin-top: 0 !important;
-    max-width: 95% !important;
+    max-width: 100% !important;
     width: 100% !important;
     padding: 0;
     

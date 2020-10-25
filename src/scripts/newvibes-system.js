@@ -15,7 +15,7 @@ $(document).ready(() => {
     let html = `
       <div id="zolo-newvibes-content">
         <div class="device-model" style="text-align: center;">
-          <h3>What iPhone do you have?</h3>
+          <h3>Which iPhone do you have?</h3>
           <div class='container-devicemodel'>
             <select class="btn-select" id="device-model">
               <option id="device-default" disabled selected="selected">Select Model</option>
@@ -41,7 +41,7 @@ $(document).ready(() => {
           <a id="upgrade-opt" class="btn-upgrade-options" href="#" data="battery" price="${upgradeOptions.battery}">Battery replacement</a>
           <a id="upgrade-opt" class="btn-upgrade-options" href="#" data="screen" price="${upgradeOptions.screen}">Screen replacement</a>
           <a id="upgrade-opt" class="btn-upgrade-options" href="#" data="housing" price="${upgradeOptions.housing}">Housing replacement</a>
-          <a id="upgrade-opt" class="btn-upgrade-options" href="#" data="all" price="${allPrice}">All the above</a>
+          <!--<a id="upgrade-opt" class="btn-upgrade-options" href="#" data="all" price="${allPrice}">All the above</a>-->
         </div>
       </div>
     `
@@ -81,20 +81,6 @@ $(document).ready(() => {
     `
     return html;
   }
-
-  // Listener for 'select pick up window' specific to input ids
-  const asapPickup = "#yui_3_17_2_1_1603017358193_267"
-  const selectedWindow = "#yui_3_17_2_1_1603017358193_282"
-  
-  $(newVibesContentDiv).on('change', selectedWindow, function() {
-    // unhide
-    $("#date-yui_3_17_2_1_1602289306229_91434, #time-yui_3_17_2_1_1602289306229_92089").css('display','block');
-  });
-
-  $(newVibesContentDiv).on('change', asapPickup, function() {
-    // clean up
-    $("#date-yui_3_17_2_1_1602289306229_91434, #time-yui_3_17_2_1_1602289306229_92089").css('display','none');
-  });
   
   getEstimatePrice = (modelList, upgradePrice, upgradeType) => {
     let estPrice = undefined;
@@ -200,8 +186,8 @@ $(document).ready(() => {
                       <legend class="title">
                         Select Pick-up Window
                       </legend>
-                      <div class="option"><label><input type="radio" name="radio-yui_3_17_2_1_1603016307989_203780-field" value="Immediate pick-up (we’ll be there in two hours)"> Immediate pick-up (we’ll be there in two hours)</label></div>
-                      <div class="option"><label><input type="radio" name="radio-yui_3_17_2_1_1603016307989_203780-field" value="Select time and date"> Select time and date</label></div>
+                      <div class="option"><label><input id="asapPickup" type="radio" name="radio-yui_3_17_2_1_1603016307989_203780-field" value="Immediate pick-up (we’ll be there in two hours)"> Immediate pick-up (we’ll be there in two hours)</label></div>
+                      <div class="option"><label><input id="selectedWindow" type="radio" name="radio-yui_3_17_2_1_1603016307989_203780-field" value="Select time and date"> Select time and date</label></div>
                   </fieldset>
                   <fieldset id="date-yui_3_17_2_1_1602289306229_91434" class="form-item fields date">
                       <legend class="title">
@@ -244,7 +230,7 @@ $(document).ready(() => {
                       </div>
                       <div class="field second two-digits" style="display:none;">
                         <label class="caption">
-                        <input class="field-element" style="display:none;" type="text" maxlength="2" data-title="Second">
+                        <input class="field-element" style="display:none;" type="text" maxlength="2" data-title="Second" value="00">
                         <span class="caption-text" style="display:none;">Second</span>
                         </label>
                       </div>
@@ -255,12 +241,12 @@ $(document).ready(() => {
                         </select>
                       </div>
                   </fieldset>
-                  <fieldset id="checkbox-yui_3_17_2_1_1603585132188_123440" class="form-item field checkbox required" aria-required="true">
+                  <fieldset style="display:none;" id="checkbox-yui_3_17_2_1_1603585132188_123440" class="form-item field checkbox required" aria-required="true">
                       <legend class="title">
                         Terms and Conditions
                         <span class="required" aria-hidden="true">*</span>
                       </legend>
-                      <div class="option"><label><input type="checkbox" name="checkbox-yui_3_17_2_1_1603585132188_123440-field" value="I Agree to Terms"> I Agree to Terms</label></div>
+                      <div class="option"><label><input type="checkbox" name="checkbox-yui_3_17_2_1_1603585132188_123440-field" value="I Agree to Terms" checked> I Agree to Terms</label></div>
                   </fieldset>
                   <input type="hidden" class="form-item field hidden" id="hidden-yui_3_17_2_1_1602289306229_90323" name="SQF_DEVICE_TYPE" value="">
                   <input type="hidden" class="form-item field hidden" id="hidden-yui_3_17_2_1_1602289306229_89145" name="SQF_ISAPPLE" value="true">
@@ -292,6 +278,20 @@ $(document).ready(() => {
     return contactFormHtml;
   }
 
+  // Listener for 'select pick up window' specific to input ids
+  const asapPickup = "#asapPickup"
+  const selectedWindow = "#selectedWindow"
+  
+  $(newVibesContentDiv).on('change', selectedWindow, function() {
+    // unhide
+    $("#date-yui_3_17_2_1_1602289306229_91434, #time-yui_3_17_2_1_1602289306229_92089").css('display','block');
+  });
+
+  $(newVibesContentDiv).on('change', asapPickup, function() {
+    // clean up
+    $("#date-yui_3_17_2_1_1602289306229_91434, #time-yui_3_17_2_1_1602289306229_92089").css('display','none');
+  });
+
   $(newVibesContentDiv).on('click', 'a#newvibes-cost-next', function(event) {
     event.preventDefault();
     $('div.featherlight-content').removeClass('background-cost');
@@ -308,7 +308,9 @@ $(document).ready(() => {
     $.featherlight({
       beforeOpen: function(event){
         $('div.featherlight-content').removeClass('background-cost');
+        $("body").addClass("modal-open");
         newVibesDeviceModel = newVibesUpgradePrice = null;
+        $.scrollify.disable()
         updateHtml(
           newVibesDeviceModelHtml(GlobalConfig['newVibeUpgradeOptions']['models']),
           removeSelector="div#zolo-newvibes-content", 
@@ -316,6 +318,10 @@ $(document).ready(() => {
         )
       }
     });
+    $.featherlight.defaults.afterClose = () => {
+      $("body").removeClass("modal-open");
+      $.scrollify.enable()
+    }
   });
 
 });
