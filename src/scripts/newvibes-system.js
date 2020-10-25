@@ -275,7 +275,7 @@ $(document).ready(() => {
                 <div class="hidden form-submission-html" data-submission-html=""></div>
             </form>
           </div>
-      </div>
+        </div>
       </div>
     </div>
     `)

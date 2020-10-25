@@ -178,7 +178,7 @@ $(document).ready(() => {
                           </div>
                       </fieldset>
 
-                      <fieldset id="checkbox-yui_3_17_2_1_1603016307989_73735" class="form-item field checkbox required" aria-required="true">
+                      <fieldset style="display:none;" id="checkbox-yui_3_17_2_1_1603016307989_73735" class="form-item field checkbox required" aria-required="true">
                           <legend class="title">
                               Terms and Conditions
 
@@ -186,7 +186,7 @@ $(document).ready(() => {
                           </legend>
 
                           <div class="option">
-                              <label><input type="checkbox" name="checkbox-yui_3_17_2_1_1603016307989_73735-field" value="I Agree to Terms" /> I Agree to Terms</label>
+                              <label><input type="checkbox" name="checkbox-yui_3_17_2_1_1603016307989_73735-field" value="I Agree to Terms" checked/> I Agree to Terms</label>
                           </div>
                       </fieldset>
 
