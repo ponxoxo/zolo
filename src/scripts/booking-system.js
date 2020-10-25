@@ -308,7 +308,7 @@ $(document).ready(() => {
                   <p>Please ensure your device is password protected to protect your data & files.</p>
                   <p>We'll let you know when we're 30 mins away from picking-up your device from your preferred address.</p>
                   <p>We will notify you when the repair is compelete and when it is on its way back to your preferred address.</p>
-                  <p>If there are any changes or issues, please contact us.</p>
+                  <p>You will receive an email from us to confirm the booking.</p>
                 </div>
                 <div class="hidden form-submission-html" data-submission-html=""></div>
             </form>
