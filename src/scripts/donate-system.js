@@ -199,7 +199,7 @@ $(document).ready(() => {
 
                   <div class="hidden form-submission-text">
                     <h2>We Appreciate your generosity</h2>
-                    <h4>Together, we are helping young Australians<br> create their passion.</h3>
+                    <h4>We will contact you when we’re 15 mins away from the pick-up location.</h4>
                   </div>
                   <div class="hidden form-submission-html" data-submission-html=""></div>
               </form>
