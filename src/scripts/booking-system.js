@@ -162,9 +162,9 @@ $(document).ready(() => {
     let contactFormHtml = $(`
       <div id="zolo-content">
         <div class="contact-information">
-          <div class="form-wrapper" id="yui_3_17_2_1_1603587099742_90">
+          <div class="form-wrapper" id="yui_3_17_2_1_1603587943426_281">
           <div class="form-title"><h3>Please complete the below</h3></div>
-          <div class="form-inner-wrapper">
+          <div class="form-inner-wrapper" id="yui_3_17_2_1_1603587943426_385">
             <form data-form-id="5f80566ae2129337fe5f699b" data-success-redirect="" autocomplete="on" method="POST" action="https://crocodile-asparagus-y2gp.squarespace.com" onsubmit="return (function (form) {
                 Y.use('squarespace-form-submit', 'node', function usingFormSubmit(Y) {
                 (new Y.Squarespace.FormSubmit(form)).submit({
@@ -174,8 +174,8 @@ $(document).ready(() => {
                 });
                 });
                 return false;
-                })(this);">
-                <div class="field-list clear">
+                })(this);" id="yui_3_17_2_1_1603587943426_384">
+                <div class="field-list clear" id="yui_3_17_2_1_1603587943426_383">
                   <fieldset id="name-yui_3_17_2_1_1602245896256_4735" class="form-item fields name required">
                       <legend class="title">
                         Name
@@ -282,6 +282,13 @@ $(document).ready(() => {
                         </select>
                       </div>
                   </fieldset>
+                  <fieldset id="checkbox-yui_3_17_2_1_1603585132188_123440" class="form-item field checkbox required" aria-required="true">
+                      <legend class="title">
+                        Terms and Conditions
+                        <span class="required" aria-hidden="true">*</span>
+                      </legend>
+                      <div class="option"><label><input type="checkbox" name="checkbox-yui_3_17_2_1_1603585132188_123440-field" value="I Agree to Terms"> I Agree to Terms</label></div>
+                  </fieldset>
                   <input type="hidden" class="form-item field hidden" id="hidden-yui_3_17_2_1_1602289306229_90323" name="SQF_DEVICE_TYPE" value="${deviceType}">
                   <input type="hidden" class="form-item field hidden" id="hidden-yui_3_17_2_1_1602289306229_89145" name="SQF_ISAPPLE" value="${isApple}">
                   <input type="hidden" class="form-item field hidden" id="hidden-yui_3_17_2_1_1602289306229_88031" name="SQF_DEVICE_MODEL" value="${deviceModel}">
@@ -292,7 +299,7 @@ $(document).ready(() => {
                   form-button-wrapper
                   form-button-wrapper--align-left
                   ">
-                  <input class="contact-info-submit-btn" type="submit" value="Submit">
+                  <input class="button sqs-system-button" type="submit" value="Submit">
                 </div>
                 <div class="hidden form-submission-text">
                   <h2>Thank you for choosing Zolo</h2>
@@ -306,6 +313,7 @@ $(document).ready(() => {
                 <div class="hidden form-submission-html" data-submission-html=""></div>
             </form>
           </div>
+        </div>
       </div>
     </div>
     `)
