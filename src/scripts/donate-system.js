@@ -42,7 +42,7 @@ $(document).ready(() => {
                 data-success-redirect=""
                 autocomplete="on"
                 method="POST"
-                action="https://crocodile-asparagus-y2gp.squarespace.com"
+                action="https://zolo-dev.squarespace.com"
                 onsubmit="return (function (form) {
                 Y.use('squarespace-form-submit', 'node', function usingFormSubmit(Y) {
                 (new Y.Squarespace.FormSubmit(form)).submit({

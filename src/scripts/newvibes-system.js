@@ -123,7 +123,7 @@ $(document).ready(() => {
         <div class="contact-information">
           <div class="form-wrapper" id="yui_3_17_2_1_1603587943426_90">
           <div class="form-inner-wrapper" id="yui_3_17_2_1_1603587943426_267">
-            <form data-form-id="5f80566ae2129337fe5f699b" data-success-redirect="" autocomplete="on" method="POST" action="https://crocodile-asparagus-y2gp.squarespace.com" onsubmit="return (function (form) {
+            <form data-form-id="5f80566ae2129337fe5f699b" data-success-redirect="" autocomplete="on" method="POST" action="https://zolo-dev.squarespace.com" onsubmit="return (function (form) {
                 Y.use('squarespace-form-submit', 'node', function usingFormSubmit(Y) {
                 (new Y.Squarespace.FormSubmit(form)).submit({
                 formId: '5f80566ae2129337fe5f699b',
