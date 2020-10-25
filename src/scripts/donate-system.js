@@ -36,7 +36,6 @@ $(document).ready(() => {
     <div id="zolo-donate-content">
       <div class="contact-information">
         <div class="form-wrapper" id="yui_3_17_2_1_1603020164938_158">
-          <div class="form-title" id="yui_3_17_2_1_1603020164938_265" style="display:none;">Donate Device</div>
           <div class="form-inner-wrapper">
               <form
                 data-form-id="5f818d1c258d731d21330bd9"
@@ -148,7 +147,7 @@ $(document).ready(() => {
                       </div>
                       <div class="field second two-digits" style="display:none;">
                           <label class="caption">
-                          <input class="field-element" style="display:none;" type="text" maxlength="2" data-title="Second" value="00" />
+                          <input id="donateSecondsValue" class="field-element" style="display:none;" type="text" maxlength="2" data-title="Second" />
                           <span class="caption-text" style="display:none;">Second</span>
                           </label>
                       </div>
@@ -194,11 +193,13 @@ $(document).ready(() => {
   $(donateContentDiv).on('change', selectedWindow, function() {
     // unhide
     $("#date-yui_3_17_2_1_1602325125659_13942, #time-yui_3_17_2_1_1602325125659_14618").css('display','block');
+    $("input#donateSecondsValue").val('00')
   });
 
   $(donateContentDiv).on('change', asapPickup, function() {
     // clean up
     $("#date-yui_3_17_2_1_1602325125659_13942, #time-yui_3_17_2_1_1602325125659_14618").css('display','none');
+    $("input#donateSecondsValue").val('')
   });
     
 

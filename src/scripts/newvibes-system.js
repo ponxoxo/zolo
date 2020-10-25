@@ -122,7 +122,6 @@ $(document).ready(() => {
       <div id="zolo-newvibes-content">
         <div class="contact-information">
           <div class="form-wrapper" id="yui_3_17_2_1_1603587943426_90">
-          <div class="form-title"><h3>Please complete the below</h3></div>
           <div class="form-inner-wrapper" id="yui_3_17_2_1_1603587943426_267">
             <form data-form-id="5f80566ae2129337fe5f699b" data-success-redirect="" autocomplete="on" method="POST" action="https://crocodile-asparagus-y2gp.squarespace.com" onsubmit="return (function (form) {
                 Y.use('squarespace-form-submit', 'node', function usingFormSubmit(Y) {
@@ -230,7 +229,7 @@ $(document).ready(() => {
                       </div>
                       <div class="field second two-digits" style="display:none;">
                         <label class="caption">
-                        <input class="field-element" style="display:none;" type="text" maxlength="2" data-title="Second" value="00">
+                        <input id="newVibesSecondsValue" class="field-element" style="display:none;" type="text" maxlength="2" data-title="Second">
                         <span class="caption-text" style="display:none;">Second</span>
                         </label>
                       </div>
@@ -285,11 +284,13 @@ $(document).ready(() => {
   $(newVibesContentDiv).on('change', selectedWindow, function() {
     // unhide
     $("#date-yui_3_17_2_1_1602289306229_91434, #time-yui_3_17_2_1_1602289306229_92089").css('display','block');
+    $("input#newVibesSecondsValue").val('00')
   });
 
   $(newVibesContentDiv).on('change', asapPickup, function() {
     // clean up
     $("#date-yui_3_17_2_1_1602289306229_91434, #time-yui_3_17_2_1_1602289306229_92089").css('display','none');
+    $("input#newVibesSecondsValue").val('')
   });
 
   $(newVibesContentDiv).on('click', 'a#newvibes-cost-next', function(event) {
