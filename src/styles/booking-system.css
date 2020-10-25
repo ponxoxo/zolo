@@ -84,7 +84,7 @@ img#device-icon {
   }
   img#device-icon {
     max-width: 40%;
-    height: 200px;
+    height: 140px;
   }
 }
 a#device:hover > h4 {

@@ -32,23 +32,8 @@ $(document).ready(() => {
   $(newVibesContentDiv).append(newVibesDeviceModelHtml(GlobalConfig['isApple']['phone']['models']));
   
   // Upgrade Selection
-  newVibesUpgradeOptionsHtml = (upgradeOptions, modelList, selectedModel) => {
-    const calcAllPricing = (upgradeOptions, modelList) => {
-      let modelPrice = undefined;
-      for (model of modelList) {
-        if (Object.keys(model)[0] == selectedModel) {
-          modelPrice = model[selectedModel]
-          break;
-        }
-      }
-      return (
-        (parseInt(modelPrice) + 
-        parseInt(upgradeOptions.battery) + 
-        parseInt(upgradeOptions.screen) + 
-        parseInt(upgradeOptions.housing)) * 0.8
-      )
-    }
-    const allPrice = calcAllPricing(upgradeOptions, modelList);
+  newVibesUpgradeOptionsHtml = (upgradeOptions) => {
+    const allPrice = parseInt(upgradeOptions.battery) + parseInt(upgradeOptions.screen) + parseInt(upgradeOptions.housing);
     let upgradeOptionsHtml = `
       <div id="zolo-newvibes-content">
         <h2 style="text-align: center; color: black !important;">Select upgrade option</h2>
@@ -69,9 +54,7 @@ $(document).ready(() => {
     console.log(`Device Model: ${newVibesDeviceModel}`)
     updateHtml(
       newVibesUpgradeOptionsHtml(
-        GlobalConfig['newVibeUpgradeOptions']['issues'], 
-        GlobalConfig['newVibeUpgradeOptions']['models'],
-        newVibesDeviceModel
+        GlobalConfig['newVibeUpgradeOptions']['issues']
       ), 
       removeSelector="div#zolo-newvibes-content", 
       appendSelector="div#newvibes-system" 
@@ -113,14 +96,34 @@ $(document).ready(() => {
     $("#date-yui_3_17_2_1_1602289306229_91434, #time-yui_3_17_2_1_1602289306229_92089").css('display','none');
   });
   
-
+  getEstimatePrice = (modelList, upgradePrice, upgradeType) => {
+    let estPrice = undefined;
+    for (model of modelList) {
+      if (Object.keys(model)[0] == newVibesDeviceModel) {
+        modelPrice = model[newVibesDeviceModel]
+        break;
+      }
+    }
+    if (upgradeType == 'all') {
+      estPrice = ((parseInt(modelPrice) + parseInt(upgradePrice)) * 0.8);
+    } else {
+      estPrice = parseInt(modelPrice) + parseInt(upgradePrice);
+    }
+    return estPrice
+  }
   $(newVibesContentDiv).on('click', 'a#upgrade-opt', function(event) {
     event.preventDefault();
     newVibesUpgradePrice = $(this).attr('price');
-    console.log(`Upgrade Price: ${newVibesUpgradePrice}`);
+    const newVibesUpgradeType = $(this).attr('data');
+    const estPrice = getEstimatePrice(
+      GlobalConfig['newVibeUpgradeOptions']['models'], 
+      newVibesUpgradePrice, 
+      newVibesUpgradeType
+    );
+    console.log(`Upgrade Price: ${estPrice}`);
     $('div.featherlight-content').addClass('background-cost');
     updateHtml(
-      estimatedCostHtml(newVibesUpgradePrice),
+      estimatedCostHtml(estPrice),
       removeSelector="div#zolo-newvibes-content", 
       appendSelector="div#newvibes-system" 
     );
