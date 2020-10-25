@@ -161,6 +161,9 @@ a#button-faq > p {
   .grid-container-facts {
     grid-template-columns: 50% auto;;
   }
+  .grid-container-steps {
+    grid-template-columns: 50% auto;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -169,6 +172,15 @@ a#button-faq > p {
   }
   .grid-container-facts-sub {
     margin: 30px 0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .grid-container-steps {
+    grid-template-columns: auto;
+  }
+  .grid-container-steps-sub {
+    margin: 25px 0;
   }
 }
 
@@ -181,3 +193,5 @@ a#button-faq > p {
     margin: 25px 0;
   }
 }
+
+

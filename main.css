@@ -40,7 +40,7 @@ a {
 .sqs-block-button-element {
   font-family: 'custom-poppin-bold'
 }
-a[href="/zolotogether"], a[href="/new-phone-vibes"], a[href="/about-us"], [href="/about-us#8"] {
+a[href="/together"], a[href="/newphonevibe"], a[href="/about"], [href="/about#8"] {
   padding: 10px 40px;
 }
 p, div {
@@ -77,8 +77,8 @@ div.header-actions-action.header-actions-action--social > a:nth-child(2) { /* hi
 #header > div.header-menu.header-menu--folder-list > div.header-menu-nav > nav > div > div.header-menu-actions > div:nth-child(2) {
   display: none;
 }
-nav > div > a[href="/zolotogether"], nav > div > a[href="/zolorewards"], 
-nav > div > a[href="/new-phone-vibes"], nav > div > a[href="/faqs"] {
+nav > div > a[href="/together"], nav > div > a[href="/zolorewards"], 
+nav > div > a[href="/newphonevibe"], nav > div > a[href="/faqs"] {
   display: none;
 }
 .header-nav-list {
@@ -104,11 +104,11 @@ p.preFade {
   div.header-title > div > a > img {
     max-height: 54px !important;
   }
-  nav > div > a[href="/zolotogether"], nav > div > a[href="/zolorewards"], 
-  nav > div > a[href="/new-phone-vibes"], nav > div > a[href="/faqs"] {
+  nav > div > a[href="/together"], nav > div > a[href="/zolorewards"], 
+  nav > div > a[href="/newphonevibe"], nav > div > a[href="/faqs"] {
     display: inline-block;
   }
-  a[href="/zolotogether"], a[href="/new-phone-vibes"], a[href="/about-us"], a[href="/about-us#8"] {
+  a[href="/together"], a[href="/newphonevibe"], a[href="/about"], [href="/about#8"] {
     padding: 9.7px 40px
   }
 }
@@ -116,4 +116,13 @@ p.preFade {
 /* Contact Information - Thank You */
 .form-submission-text {
   text-align: center;
+}
+
+.contact-info-submit-btn {
+  color: #fff !important;
+  background-color: var(--btn-color) !important;
+  border-color: var(--btn-color);
+  border: 0px;
+  outline: 0px !important;
+  border-radius: 8px;
 }

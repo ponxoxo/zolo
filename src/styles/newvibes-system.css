@@ -10,10 +10,8 @@ div.featherlight-content {
   background-color: var(--content-background-color);
 }
 div.featherlight > div.featherlight-content {
-  margin-top: 75.5px;
-  margin-bottom: 75.5px;
-  max-width: 70%;
-  margin: 0 auto;
+  padding: 4vw;
+  margin: auto;
 }
 .modal-btn {
   color: #fff;
@@ -31,22 +29,11 @@ div.featherlight > div.featherlight-content {
   color: var(--black-color-hover);
 }
 @media only screen and (max-width: 600px) {
-  div.featherlight > div.featherlight-content {
-    margin-top: 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    
-  }
   div.featherlight {
     background-color: #fff !important;
   }
   .featherlight .featherlight-close-icon { /* Fix close button from going to far right */
     margin-right: 15px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  div.featherlight > div.featherlight-content {
-    width: 600px;
   }
 }
 
@@ -101,6 +88,24 @@ div.featherlight > div.featherlight-content {
 }
 .btn-upgrade-options:hover {
   background: #a000cc;
+}
+
+/* Price Estimate */
+.container-newvibes-cost {
+  width: 400px;
+}
+.container-newvibes-cost > h2 {
+  color: white;
+}
+.container-newvibes-cost > a > h4 {
+  padding-top: 30px;
+  color: white;
+}
+.container-newvibes-cost > a > h4:hover {
+  color: var(--white-color-hover);
+}
+.background-cost {
+  background-color: var(--teal) !important;
 }
 
 /* Contact Information */

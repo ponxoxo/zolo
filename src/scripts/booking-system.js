@@ -163,7 +163,7 @@ $(document).ready(() => {
       <div id="zolo-content">
         <div class="contact-information">
           <div class="form-wrapper" id="yui_3_17_2_1_1603017358193_90">
-            <div class="form-title" style="display:none;">Booking</div>
+            <div class="form-title"><h3>Please complete the below</h3></div>
             <div class="form-inner-wrapper" id="yui_3_17_2_1_1603017358193_272">
               <form data-form-id="5f80566ae2129337fe5f699b" data-success-redirect="" autocomplete="on" method="POST" action="https://crocodile-asparagus-y2gp.squarespace.com" onsubmit="return (function (form) {
                   Y.use('squarespace-form-submit', 'node', function usingFormSubmit(Y) {
@@ -299,7 +299,7 @@ $(document).ready(() => {
                     form-button-wrapper
                     form-button-wrapper--align-left
                     ">
-                    <input class="button sqs-system-button" type="submit" value="Submit">
+                    <input class="contact-info-submit-btn" type="submit" value="Submit">
                   </div>
                   <div class="hidden form-submission-text">
                     <h2>Thank you for choosing Zolo</h2>

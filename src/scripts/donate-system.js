@@ -194,7 +194,7 @@ $(document).ready(() => {
                   </div>
 
                   <div class="form-button-wrapper form-button-wrapper--align-left">
-                      <input class="button sqs-system-button" type="submit" value="Submit" />
+                      <input class="contact-info-submit-btn" type="submit" value="Submit" />
                   </div>
 
                   <div class="hidden form-submission-text">
