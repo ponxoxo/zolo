@@ -62,10 +62,6 @@ label.error {
 .center-text{
   text-align: center;
 }
-/* Zolotogether hide*/ 
-#header > div.header-announcement-bar-wrapper > div > div.header-display-desktop > div.header-title-nav-wrapper > div.header-nav > div > nav > div:nth-child(1) > a {
-  display: none;
-}
 div.header-actions-action.header-actions-action--social > a:nth-child(1) { /* facebook icon */
   border-left: 1px solid white;
   margin-left: 1.5em !important;
@@ -81,7 +77,8 @@ div.header-actions-action.header-actions-action--social > a:nth-child(2) { /* hi
   display: none;
 }
 nav > div > a[href="/together"], nav > div > a[href="/zolorewards"], 
-nav > div > a[href="/newphonevibe"], nav > div > a[href="/faqs"] {
+nav > div > a[href="/newphonevibe"], nav > div > a[href="/faqs"],
+nav > div > a[href="/repairs"], nav > div > a[href="/sustain"], nav > div > a[href="/refurbish"] {
   display: none;
 }
 .header-nav-list {
@@ -108,7 +105,8 @@ p.preFade {
     max-height: 54px !important;
   }
   nav > div > a[href="/together"], nav > div > a[href="/zolorewards"], 
-  nav > div > a[href="/newphonevibe"], nav > div > a[href="/faqs"] {
+  nav > div > a[href="/newphonevibe"], nav > div > a[href="/faqs"], 
+  nav > div > a[href="/repairs"], nav > div > a[href="/sustain"], nav > div > a[href="/refurbish"] {
     display: inline-block;
   }
   a[href="/together"], a[href="/newphonevibe"], a[href="/about"], [href="/about#8"] {

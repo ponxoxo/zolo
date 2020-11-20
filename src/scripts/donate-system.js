@@ -100,7 +100,7 @@ $(document).ready(() => {
                           <span class="required" aria-hidden="true">*</span>
                       </legend>
                       <div class="option">
-                          <label><input type="radio" name="radio-yui_3_17_2_1_1603016307989_240197-field" id="asapPickup" value="Immediate pick-up (we’ll be there in two hours)" /> Immediate pick-up (we’ll be there in two hours)</label>
+                          <label><input type="radio" name="radio-yui_3_17_2_1_1603016307989_240197-field" id="asapPickup" value="Immediate pick-up (we’ll be there in two hours for bookings made from 8am - 3pm)" /> Immediate pick-up (we’ll be there in two hours for bookings made from 8am - 3pm)</label>
                       </div>
                       <div class="option">
                           <label><input type="radio" name="radio-yui_3_17_2_1_1603016307989_240197-field" id="selectDateTime" value="Select time and date" /> Select time and date</label>
